@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body,
+.bg-gradient {
+    background: linear-gradient(to right, #ece9e6, #ffffff);
+}
+
+.nav-effect {
+    width: 35px;
+}
+
+.home-image {
+    width: 600px;
+    height: 400px;
+}
+
+.aboutCrypto-image {
+    width: 550px;
+    height: 300px;
+}
+
+canvas {
+    width: 200px !important;
+    height: 60px !important;
+}
+
+.padding-section-table {
+    padding: 0 1.25rem 1.25rem 1.25rem;
+}
