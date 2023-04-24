@@ -10,7 +10,7 @@ const NavBar = () => {
 
   return (
     <div className="flex xl:px-32 md:px-20 px-8 py-5 items-center justify-between w-full sticky bg-gradient">
-      <section className="flex w-16 h-16 exsm:hidden">
+      <section className="flex w-16 h-16">
         <Logo size={55} />
       </section>
 
@@ -46,9 +46,7 @@ const NavBarLabel = ({ label, labelSelect, setLabelSelect }) => {
         {label}
       </p>
       <div
-        className={`bg-colorButtonBg w-0 rounded-full h-1 duration-300 transition-all ${
-          hoverEffect || labelSelect === label ? "nav-effect" : ""
-        }`}
+        className={`bg-colorButtonBg w-0 rounded-full h-1 duration-300 transition-all ${"nav-effect"}`}
       ></div>
     </div>
   );

@@ -17,13 +17,13 @@ const Info = () => {
         </p>
 
         <div className="flex esm:flex-col gap-y-3 items-center xl:justify-start gap-x-6 w-full justify-center">
-          <button className="rounded-full text-white font-semibold bg-colorButtonBg px-8 py-4 text-xl">
+          <button className="w-[260px] rounded-full text-white font-semibold bg-colorButtonBg py-4 text-xl">
             Get Started
           </button>
 
-          <button className="flex items-center rounded-full bg-slate-300 px-8 py-4">
+          <button className="w-[260px] flex items-center rounded-full bg-slate-300 py-4 justify-center">
             <img src={play} alt="play-button" className="w-7 h-7" />
-            <p className="text-lg font-semibold text-slate-600 mx-4">
+            <p className="text-lg font-semibold text-slate-600 ml-4">
               Watch Tutorial
             </p>
           </button>
