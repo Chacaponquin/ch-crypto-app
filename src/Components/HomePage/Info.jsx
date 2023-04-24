@@ -3,21 +3,20 @@ import play from "../../assets/play-icon.png";
 
 const Info = () => {
   return (
-    <section className="flex items-start justify-between">
-      <div className="flex flex-col max-w-lg">
-        <h1 className="font-extrabold text-6xl leading-snug">
+    <section className="flex items-start xl:justify-between justify-center">
+      <div className="flex flex-col max-w-lg xl:text-left text-center">
+        <h1 className="font-extrabold text-6xl esm:text-5xl esm:leading-tight leading-snug">
           Availeble <p className="inline text-colorButtonBg">P2P</p>{" "}
           cryptocurrency lending platform
         </h1>
 
-        <p className="py-8 text-slate-600 font-semibold">
-          Libra is a complete{" "}
-          <p className="inline text-colorButtonBg">free market</p> environment
-          that contains all the elements that a credit business needs to
-          function
+        <p className="py-8 esm:py-5 text-slate-600 font-semibold">
+          Stay up-to-date with real-time information, news, and expert analysis.
+          Join the revolution and make informed decisions about your
+          investments. Start exploring now!
         </p>
 
-        <div className="flex items-center justify-around">
+        <div className="flex esm:flex-col gap-y-3 items-center xl:justify-start gap-x-6 w-full justify-center">
           <button className="rounded-full text-white font-semibold bg-colorButtonBg px-8 py-4 text-xl">
             Get Started
           </button>
@@ -31,11 +30,11 @@ const Info = () => {
         </div>
       </div>
 
-      <div className="">
+      <div className="xl:block hidden">
         <img
           src="./home-photo.png"
           alt=""
-          className="w-96 h-96 object-cover home-image"
+          className="object-cover home-image"
         />
       </div>
     </section>

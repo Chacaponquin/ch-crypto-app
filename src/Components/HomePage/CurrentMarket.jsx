@@ -1,5 +1,4 @@
 import React from "react";
-import { BsCurrencyBitcoin } from "react-icons/bs";
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -46,9 +45,9 @@ const CurrentMarket = ({ coinsData }) => {
   const labels = ["Market", "Coin", "Last Price", "Change", "Behavior"];
 
   return (
-    <div>
-      <h1 className="text-5xl font-extrabold mt-10 mb-3">Current Market</h1>
-      <table className="w-full table-auth bg-slate-200 rounded-2xl border-collapse text-left align-top">
+    <div className="md:block hidden">
+      <h1 className="text-5xl font-extrabold mt-10 mb-5">Current Market</h1>
+      <table className="w-full table-auth bg-slate-200 rounded border-collapse text-left align-top">
         <thead className="">
           <tr className="">
             {labels.map((label, i) => (

@@ -7,12 +7,7 @@ import FAQ from "./FAQ";
 import Info from "./Info";
 
 const HomePage = () => {
-  const [coinsTrend, setCoinsTrend] = useState([
-    "Bitcoin",
-    "Bnb",
-    "Etherium",
-    "Tron",
-  ]);
+  const COINS_TREND = ["Bitcoin", "Bnb", "Etherium", "Tron"];
 
   const [coinsData, setCoinsData] = useState(null);
 
@@ -35,19 +30,20 @@ const HomePage = () => {
         },
       })
       .then(({ data }) => {
-        console.log(data.data);
         setCoinsData(data.data.coins);
       })
-      .catch((error) => console.log(error));
+      .catch((error) => {});
   }, []);
 
   return (
-    <div className="px-40 pb-20">
-      <Info />
-      <CoinsTrend coinsTrend={coinsTrend} />
-      {coinsData && <CurrentMarket coinsData={coinsData} />}
-      <AboutCrypto />
-      <FAQ />
+    <div className="flex justify-center w-full px-10">
+      <div className="w-full flex-col flex max-w-[1100px]">
+        <Info />
+        <CoinsTrend coinsTrend={COINS_TREND} />
+        {coinsData && <CurrentMarket coinsData={coinsData} />}
+        <AboutCrypto />
+        <FAQ />
+      </div>
     </div>
   );
 };

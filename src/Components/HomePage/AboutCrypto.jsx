@@ -3,15 +3,15 @@ import coins_hand from "../../assets/coin-in-hand.png";
 
 const AboutCrypto = () => {
   return (
-    <div className="flex py-14 items-center">
+    <div className="flex py-14 esm:py-10 items-center">
       <img
-        className="object-cover aboutCrypto-image"
+        className="object-cover aboutCrypto-image xl:block hidden"
         src={coins_hand}
         alt="coin-in-hand"
       />
 
-      <section className="px-10 max-w-2xl">
-        <h1 className="text-5xl font-extrabold">
+      <section className="xl:pl-10 w-full xl:max-w-2xl">
+        <h1 className="text-5xl esm:text-4xl font-extrabold">
           Do you know what cryptocurrencies are?
         </h1>
         <p className="pt-5 font-semibold text-gray-500 text-base">

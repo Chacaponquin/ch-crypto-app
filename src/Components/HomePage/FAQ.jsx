@@ -6,11 +6,10 @@ import { FAQData } from "../../helpers/FAQData";
 
 const FAQ = () => {
   return (
-    <div className="py-12">
+    <div className="py-12 esm:py-8">
       <div>
         <section className="mb-5 w-max">
-          <h1 className="font-bold text-5xl mb-3">FAQ</h1>
-          <div className="h-3 bg-colorButtonBg rounded-full w-full"></div>
+          <h1 className="font-extrabold text-5xl esm:text-4xl mb-3">FAQ</h1>
         </section>
 
         <Splide
@@ -18,22 +17,23 @@ const FAQ = () => {
             autoplay: true,
             rewind: true,
             width: "100%",
-            height: "350px",
             gap: "50px",
             arrows: false,
+            breakpoints: { 600: { height: "600px" }, 2000: "450px" },
+            mediaQuery: "max",
           }}
         >
-          {FAQData.map((faq) => (
-            <SplideSlide>
-              <div className="flex flex-col rounded-3xl bg-slate-300 h-full p-10 text-slate-600">
+          {FAQData.map((faq, i) => (
+            <SplideSlide key={i}>
+              <div className="flex flex-col rounded bg-slate-100 h-full p-10 ">
                 <h1
-                  className="text-3xl font-bold mb-4"
+                  className="text-3xl font-bold mb-4 esm:text-2xl"
                   dangerouslySetInnerHTML={{ __html: faq.question }}
                 ></h1>
 
                 {faq.content.map((text) => (
                   <p
-                    className="font-semibold"
+                    className="font-semibold text-gray-500 text-base esm:text-sm"
                     dangerouslySetInnerHTML={{ __html: text }}
                   ></p>
                 ))}

@@ -2,7 +2,7 @@ import { BsCurrencyBitcoin } from "react-icons/bs";
 
 const CoinsTrend = ({ coinsTrend }) => {
   return (
-    <div className="grid grid-cols-4 grid-flow-row gap-4 grid-rows-1 w-full rounded-lg bg-colorButtonBg mt-10 ">
+    <div className="grid grid-cols-2 esm:grid-cols-1 xl:grid-cols-4 grid-flow-row gap-4 w-full rounded-lg bg-colorButtonBg mt-10 ">
       {coinsTrend.map((coin, i) => (
         <CoinBlock coin={coin} key={i} />
       ))}
